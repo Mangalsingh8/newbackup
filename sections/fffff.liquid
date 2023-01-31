@@ -330,4 +330,18 @@
       background-image: url({{section.settings.bg-collection-img | img_url:'master' }});
     }
   }
+        @media(max-width:768px){
+    .background__img{
+      background-position: center center; 
+      background-repeat: no-repeat;
+      background-size:contain;
+      height:470px !important;
+      background-image: url({{section.settings.bg-mobcollection-img | img_url:'master' }}); 
+    }
+            
+    .featured-collections--root .featured-collections--wrapper {
+      display: contents !important;
+    }
+    a.featured-collection--title{width: 100%;}
+  }
 </style>
