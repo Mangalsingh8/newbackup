@@ -556,7 +556,9 @@
         "title_collection1": "",
         "title_collection2": "",
         "title_collection3": "",
-        "title_collection4": ""
+        "title_collection4": "",
+        "bg-collection-img": "shopify:\/\/shop_images\/just-purchased.jpg",
+        "bg-mobcollection-img": "shopify:\/\/shop_images\/laptop-with-shopify-sticker.jpg"
       }
     }
   },
