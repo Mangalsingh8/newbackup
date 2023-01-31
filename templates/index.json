@@ -454,6 +454,7 @@
     },
     "1658987385ad316742": {
       "type": "image-width-text-button",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/online-shopping-credit-cards.jpg",
         "heading": "Image With Text",
@@ -462,6 +463,7 @@
     },
     "b0b22e6f-a31d-43f1-91bb-d7799b9c5adc": {
       "type": "anu-ment",
+      "disabled": true,
       "settings": {
       }
     },
@@ -497,6 +499,60 @@
         "color_title": "#ed4941",
         "background__color": "linear-gradient(160deg, rgba(21, 218, 121, 1) 52%, rgba(255, 250, 99, 1) 85%)"
       }
+    },
+    "34bface6-4cde-487f-9047-ac2fbcd4b15b": {
+      "type": "fffff",
+      "blocks": {
+        "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "engagement-ring"
+          }
+        },
+        "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "t-shirt"
+          }
+        },
+        "aa6185de-b3d8-408c-844d-ccb8e488b39c": {
+          "type": "collection",
+          "settings": {
+            "collection": "engagement-ring"
+          }
+        },
+        "70fb5a7d-6b0d-44ec-a492-c4c3fb93b831": {
+          "type": "collection",
+          "settings": {
+            "collection": "t-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-0",
+        "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-1",
+        "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-2",
+        "aa6185de-b3d8-408c-844d-ccb8e488b39c",
+        "70fb5a7d-6b0d-44ec-a492-c4c3fb93b831"
+      ],
+      "settings": {
+        "background-color": "none",
+        "spacing-above": true,
+        "spacing-below": true,
+        "width": 3,
+        "mobile-width": "2",
+        "heading": "Collection list",
+        "title_collection1": "",
+        "title_collection2": "",
+        "title_collection3": "",
+        "title_collection4": ""
+      }
     }
   },
   "order": [
@@ -515,6 +571,7 @@
     "1658920610f30cc62f",
     "1658987385ad316742",
     "b0b22e6f-a31d-43f1-91bb-d7799b9c5adc",
-    "f80eba56-620c-42b1-8ad2-cef7a01081c6"
+    "f80eba56-620c-42b1-8ad2-cef7a01081c6",
+    "34bface6-4cde-487f-9047-ac2fbcd4b15b"
   ]
 }
