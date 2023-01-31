@@ -1,0 +1,33 @@
+<div id="pink">
+ <div class="zoom"><img src="{{section.settings.logo_image | img_url:'medium'}} "/></div>
+</div>
+{% schema %}
+{
+  "name": "Section name",
+  "settings": [
+   {
+    "type": "image_picker",
+    "id": "logo_image",
+    "label": "Logo image"
+  }
+  ],
+  "presets": [
+       {
+        "name":"newjoiner",
+        "category":"custom"
+       }
+
+  ]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+ $("img").click(function() {
+    $("img").elevateZoom({
+        zoomType: "lens",
+        lensShape: "round",
+        lensSize: 300
+        });
+    });
+    </script>

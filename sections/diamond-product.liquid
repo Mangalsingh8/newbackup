@@ -1,0 +1,16 @@
+<div class="main">
+  <p>{{ section.settings.heading }}}</p>
+</div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Quick links"
+    }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,84 @@
+<div class="main-header">
+  <div class="image-heading">
+    <img src="{{ section.settings.image | img_url:" "}}">
+  </div>
+  <div class="heading">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.text }}</p>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Section name",
+  "settings": [
+     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Logo image"
+    },
+     {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Quick links"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Heading",
+      "default": "Quick links"
+    }
+    
+
+  ],
+   "presets": [
+    {
+      "name": "Image with text",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .main-header{
+    display: flex;
+    width:100%;
+    flex-wrap:wrap;
+  }
+  .image-heading{
+    width:50%;
+    paddding:30px;
+  }
+   .image-heading img {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+  .heading {
+    width: 50%;
+  -webkit-text-stroke: thick;
+    padding:50px;
+}
+  .heading h1 {
+    font-size: 55px;
+    font-weight:800;
+}
+@media only screen and (max-width:768px) {
+  .main-header {
+   display:block;
+     
+  }
+  .image-heading{
+    width:100%;
+  }
+   .image-heading img{
+    width:100%;
+ }
+   .heading {
+    width: 100%;
+    text-align:center;
+   
+  }
+}
+
+</style>

@@ -1,0 +1,101 @@
+<div class="announcebar">
+     {%for block-announcebar in section.blocks%}
+        <div class="text-slide"> {{ block-announcebar.settings.announce_text }}
+       
+        </div>
+     {%endfor%}
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+      "type": "color",
+      "id": "color_title",
+      "label": "Heading color",
+      "default": "#FFFFFF"
+     },  
+      {
+      "type": "color_background",
+      "id": "background__color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+     }
+    ],
+    "blocks":[
+      {
+        "name":"announce",
+        "type":"image",
+		"settings": [
+          {
+            "id"   : "announce_text",
+            "type" : "textarea",
+            "label": "Text"
+          }
+      ]
+  }
+    ],
+    "presets":[
+       {
+        "name":"Announce"
+        }
+    ]
+  }
+{% endschema %}
+<style>
+.announcebar{
+  text-align:center;
+  background-color:{{ section.settings.background__color }};
+  color:{{ section.settings.color_title}};
+}
+.announcebar{
+  width: 100%;
+  display: flex;
+}
+
+.text-slide{
+  min-width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+</style>
+<script>
+const textSlide = document.querySelector(".announcebar");
+const text = textSlide.querySelectorAll(".text-slide");
+
+// const prev = document.querySelector(".prev");
+// const next = document.querySelector(".next");
+
+let counter = 1;
+const size = text[0].clientWidth;
+
+textSlide.style.transform = `translateX(-${size * counter}px)`;
+
+//looping the slider every 2s
+setInterval(()=>{
+  debugger
+  if(counter >= text.length -1) return;
+  
+  textSlide.style.transition = `transform 0.8s ease`;
+  counter++;
+  textSlide.style.transform = `translateX(-${size * counter}px)`; 
+  
+}, 2000);
+
+textSlide.addEventListener('transitionend', () => {
+  if(text[counter].id === 'lastClone'){
+    textSlide.style.transition = `none`;
+    counter = text.length - 2;
+    textSlide.style.transform = `translateX(-${size * counter}px)`;
+  }
+  
+  if(text[counter].id === 'firstClone'){
+    textSlide.style.transition = `none`;
+    counter = text.length - counter;
+    textSlide.style.transform = `translateX(-${size * counter}px)`;
+  }  
+});
+</script>

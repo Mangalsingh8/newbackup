@@ -1,0 +1,53 @@
+<div class="main">
+ {% for block in section.blocks %}
+    {%if block.settings.image_block != blank %}
+      <div class="va-get">
+     <h2>{{ block.settings.title }}</h2> 
+    <img class="img_block" src= "{{ block.settings.image_block | img_url:'80x' }}">
+    </div>
+    {% endif %}
+{% endfor %}
+</div>
+{% schema %}
+{
+  "name": "value-get",
+  "settings": [
+    
+  ],
+"blocks":[
+    {
+      "type": "value",
+      "name": "t:sections.collage.blocks.image.name",
+      "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    },
+      
+   {
+    "type": "image_picker",
+    "id": "image_block",
+    "label": "Image"
+    }
+  ]
+}
+],
+"presets":[
+  {
+    "name":"value",
+    "category":"custom"
+  }
+  ]
+}
+{% endschema %}
+
+<style>
+  .main_div{
+  
+  }
+  .va-get {
+    justify-content: center;
+    display: flex;
+}
+</style>

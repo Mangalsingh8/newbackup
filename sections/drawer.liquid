@@ -1,0 +1,64 @@
+<section class="drawer" id="drawer-name" data-drawer-target>
+  <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+  <div class="drawer__wrapper">
+    <div class="drawer__header">
+      <div class="drawer__title">
+         Shopping Bag
+      </div>
+      <button class="drawer__close" data-drawer-close aria-label="Close Drawer"></button>
+    </div>
+    <div class="drawer__content">
+      <div id="drawer_cart_items">
+        <div class="main__cart__item">
+          <div  id="cart_item_image" class="cart_item_image">
+
+<!--           <div class="cart_detils_item">
+              <h5 class="cart_product_heading"></h5>
+          </div>
+            <p class="mm"></p> -->
+          </div>
+          
+        </div>
+      </div>
+      <div id="drawer_cart_botton">
+        <div class="cart__total_items">
+          <div class="section_text">
+        <h4 class=>Total amount:<sapn id="drawer_total_amount"> ₹ </sapn></h4>
+          </div>
+          <div class="section_btn">
+        <a href="/checkout" class="btn cart__continue-btn">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  
+  fetch('/cart.js')
+  .then((resp) => resp.json())
+  .then((data) =>{
+    console.log('xxxxxxx',data);
+     if(data.items.length > 0) {
+        data.items.forEach(function(product, index) { 
+          let show_data =  document.getElementById("cart_item_image");
+          console.log(product , "p")
+           show_data.innerHTML +=`
+           
+           <img src="${product.featured_image.url}">
+           <div><div> ${product.featured_image.alt}</div>
+            <p> ${product.final_price/100}</p></div>
+           `
+         });
+
+    } else {
+      document.getElementById('drawer_cart_items').innerHTML = '<p>Cart is empty</p>';
+      document.getElementById('drawer_checkout_btn').setAttribute('disabled', 'disabled');
+      document.getElementById('drawer_checkout_btn').style.pointerEvents = 'none';
+    }
+    
+    document.getElementById('drawer_total_amount').innerHTML = '₹'+data.total_price/100;
+    
+  });
+</script>

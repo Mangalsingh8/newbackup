@@ -1,0 +1,73 @@
+{% comment %} <center>
+{% comment %}{% assign mks =6 %}
+{{ mks }} <br>
+{% comment %} <p>Leronlimab is a humanized monoclonal antibody targeted against the CCR5 receptor found on T lymphocytes of the human immune system.
+It is being investigated as a potential therapy in the treatment of COVID-19, triple negative breast cancer, and HIV infection.</p>{% endcomment %}
+{{ mks }} <br>
+{% assign num1 = 30 %}
+{% assign num2 = 30 %}
+Addition = {{ num1 | plus: num2 }} <br>
+Substraction = {{ num1 | minus: num2 }} <br>
+Multiple = {{ num1 | times: num2 }} <br>
+Division = {{ num1 | divided_by: num2 }} <br>
+  {% if num1 == num2 %}
+    number is both 
+  {% else %}
+    number is not both
+  {% endif %}<br>
+
+  
+  {% assign color = 'blue' %}<br>
+   {% case color %}
+     {% when 'red' %}
+    This is a {{ color }}
+     {% when 'blue' %}
+      This is a {{ color }}
+    {% when 'pink' %}
+     This is a {{ color }}
+  {% else %}
+     None a the case
+  {% endcase %}<br>
+
+  {% for i in (1..10) %}
+    This is a number = {{ i }}<br>
+    {% endfor %}<br>
+  {% endcomment %}
+
+
+
+  {% for i in (1..10) %}
+    {% if forloop.first %}
+      The forloop is a first index <br>
+    {% elsif forloop.last %}
+      The forloop is a last index <br>
+      {% else %}
+      This is a = {{ i }}<br>
+  {% endif %}
+  {% endfor %}
+
+ {% for product in collections.engagement-ring.products %}
+   {{ product.title }}<br>
+   {% endfor %}
+ {% for product in collections.t-shirt.products %}
+   {{ product.title }}<br>
+   {% endfor %}
+</center> {% endcomment %}
+
+<center>
+{% assign mks = 'mangalsingh' %}
+  {{ mks }}
+<br>
+  {% assign m1 = 30 %}
+  {% assign m2 = 30 %}
+  {{ m1 | m2: plus }} <br>
+   {{ m1 |  minus: m2 }} <br>
+  {{ m1 | divided_by: m2 }}<br>
+  {{ m1 | modulo: m2 }}
+  
+  {% assign filename = "/index.html" %}
+{{ "website.com" | append: filename }}
+ {% for product in collections.t-shirt.products %}
+   {{ product.title }}<br>
+   {% endfor %}
+</center>

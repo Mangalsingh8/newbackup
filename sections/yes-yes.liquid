@@ -1,0 +1,32 @@
+<div class="slick-main">
+   {% for block in section.blocks %}
+    <source src="{{ block.settings.video}}" type="video/mp4">
+     {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      
+   ],
+  "blocks": [
+    {
+      "type": "Slider",
+      "name": "t:sections.collage.blocks.image.name",
+      "settings": [
+       {
+      "type": "video",
+      "id": "video",
+      "label": "A Shopify-hosted video"
+      }
+    ]
+  }
+  ],
+  "presets":[
+    {
+    "name":"Slider1111",
+    "category":"custom"
+    }
+  ]
+}
+{% endschema %}

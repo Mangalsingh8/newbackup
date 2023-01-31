@@ -1,0 +1,13 @@
+{% assign a=55 %}
+{% assign b=56 %}
+{% assign c= a | plus: b %}
+{{ c }}<br>
+{{ 111 | divided_by: 2.0 }}
+<br>
+  {% assign a=2  %}
+  {% assign i=1  %}
+  {% for i in (1..10)  %}
+    {% assign i=1 | plus  %}
+   {{ i }}*{{ a }}={{ i | times: a }}<br>
+  {%- endfor %}
+
