@@ -547,18 +547,16 @@
         "70fb5a7d-6b0d-44ec-a492-c4c3fb93b831"
       ],
       "settings": {
-        "background-color": "none",
+        "background-color": "dark",
         "spacing-above": true,
         "spacing-below": true,
-        "width": 3,
-        "mobile-width": "2",
+        "width": 6,
+        "mobile-width": "1",
         "heading": "Collection list",
         "title_collection1": "",
         "title_collection2": "",
         "title_collection3": "",
-        "title_collection4": "",
-        "bg-collection-img": "shopify:\/\/shop_images\/just-purchased.jpg",
-        "bg-mobcollection-img": "shopify:\/\/shop_images\/laptop-with-shopify-sticker.jpg"
+        "title_collection4": ""
       }
     }
   },
