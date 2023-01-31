@@ -506,31 +506,36 @@
         "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-0": {
           "type": "collection",
           "settings": {
-            "collection": "engagement-ring"
+            "collection": "engagement-ring",
+            "image1": "shopify:\/\/shop_images\/1.webp"
           }
         },
         "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-1": {
           "type": "collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "frontpage",
+            "image1": "shopify:\/\/shop_images\/1.webp"
           }
         },
         "template--16726029041914__34bface6-4cde-487f-9047-ac2fbcd4b15b-167516518290777441-2": {
           "type": "collection",
           "settings": {
-            "collection": "t-shirt"
+            "collection": "t-shirt",
+            "image1": "shopify:\/\/shop_images\/1.webp"
           }
         },
         "aa6185de-b3d8-408c-844d-ccb8e488b39c": {
           "type": "collection",
           "settings": {
-            "collection": "engagement-ring"
+            "collection": "engagement-ring",
+            "image1": "shopify:\/\/shop_images\/1.webp"
           }
         },
         "70fb5a7d-6b0d-44ec-a492-c4c3fb93b831": {
           "type": "collection",
           "settings": {
-            "collection": "t-shirt"
+            "collection": "t-shirt",
+            "image1": "shopify:\/\/shop_images\/1.webp"
           }
         }
       },
