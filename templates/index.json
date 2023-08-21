@@ -176,7 +176,6 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h1",
@@ -204,7 +203,6 @@
     },
     "16583019860a460cfc": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "Engagement Ring",
         "heading_size": "h2",
@@ -232,6 +230,7 @@
     },
     "1658302548932fbf48": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "T-Shirt",
         "heading_size": "h1",
