@@ -164,6 +164,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -175,6 +176,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h1",
@@ -202,6 +204,7 @@
     },
     "16583019860a460cfc": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Engagement Ring",
         "heading_size": "h2",
@@ -428,6 +431,7 @@
         "column3",
         "b45f2eab-34c2-4327-aedc-9b9712c3b0c2"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -554,6 +558,7 @@
         "70fb5a7d-6b0d-44ec-a492-c4c3fb93b831",
         "30adb6d9-4c86-4bee-a58a-7ac5fd169a73"
       ],
+      "disabled": true,
       "settings": {
         "background-color": "dark",
         "spacing-above": true,
