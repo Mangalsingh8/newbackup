@@ -75,7 +75,6 @@
     },
     "165829719386246ccd": {
       "type": "announcement",
-      "disabled": true,
       "blocks": {
         "870b76f7-42c4-4311-99be-b558f0930d2b": {
           "type": "image",
@@ -87,6 +86,7 @@
       "block_order": [
         "870b76f7-42c4-4311-99be-b558f0930d2b"
       ],
+      "disabled": true,
       "settings": {
         "enable_bar": true,
         "color_title": "#ffffff",
@@ -95,7 +95,6 @@
     },
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -128,6 +127,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "{{ shop.brand.cover_image }}",
         "image_2": "shopify:\/\/shop_images\/just-purchased.jpg",
@@ -327,7 +327,6 @@
     },
     "collage": {
       "type": "collage",
-      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -354,6 +353,7 @@
         "product",
         "collection-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -469,7 +469,6 @@
     },
     "f80eba56-620c-42b1-8ad2-cef7a01081c6": {
       "type": "text-slider",
-      "disabled": true,
       "blocks": {
         "a1538f10-08fc-4bf5-a090-97b455dd386e": {
           "type": "image",
@@ -495,6 +494,7 @@
         "5387864d-aebf-4013-9769-b71933116f58",
         "47b27738-f7a0-42a3-81ff-979d32dc4ca1"
       ],
+      "disabled": true,
       "settings": {
         "color_title": "#ed4941",
         "background__color": "linear-gradient(160deg, rgba(21, 218, 121, 1) 52%, rgba(255, 250, 99, 1) 85%)"
@@ -566,6 +566,12 @@
         "title_collection3": "",
         "title_collection4": ""
       }
+    },
+    "d8a8cc8e-4b93-4303-9437-2ea0c82f7732": {
+      "type": "video_section",
+      "settings": {
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+      }
     }
   },
   "order": [
@@ -585,6 +591,7 @@
     "1658987385ad316742",
     "b0b22e6f-a31d-43f1-91bb-d7799b9c5adc",
     "f80eba56-620c-42b1-8ad2-cef7a01081c6",
-    "34bface6-4cde-487f-9047-ac2fbcd4b15b"
+    "34bface6-4cde-487f-9047-ac2fbcd4b15b",
+    "d8a8cc8e-4b93-4303-9437-2ea0c82f7732"
   ]
 }
