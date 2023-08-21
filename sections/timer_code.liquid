@@ -1,12 +1,161 @@
+<!-- count-down-timer -->
+
+<div class="maincountDown">
+  <p class="timer__title">{{ section.settings.Section_title }}</p>
+  <div class="countdownTitles">
+    <div class="timer__text countDownCls">
+      {% for block in section.blocks %}
+        <div class="countdownTitle">
+          {{ block.settings.timer_text }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="countdown" class="countDownCls">
+    <div id="days">{{ section.settings.days }}</div>
+    <div id="hours">{{ section.settings.hours }}</div>
+    <div id="minutes">{{ section.settings.minute }}</div>
+    <div id="seconds">{{ section.settings.second }}</div>
+  </div>
+</div>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Count-Down-timer",
+  "settings": [
+    {
+      "type": "html",
+      "id": "Section_title",
+      "label": "Section-title"
+    },
+    {
+      "type": "text",
+      "id": "days",
+      "label": "Days"
+    },
+    {
+      "type": "text",
+      "id": "hours",
+      "label": "Hours"
+    },
+    {
+      "type": "text",
+      "id": "minute",
+      "label": "Minutes"
+    },
+    {
+      "type": "text",
+      "id": "second",
+      "label": "Second"
+    },
+    {
+      "type": "text",
+      "id": "count",
+      "label": "Days-Hours-Minutes-Second"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"heder",
+      "name":"Timer-text",
+      "limit":12,
+      "settings":[
+        {
+          "type": "text",
+          "id": "timer_text",
+          "label": "Timer-Text"
+        }
+      ]
+    }
+  ],
+  "presets":[
+          {
+                "name":"Counter-Down-Timer",
+                "category":"custom"
+          }
+            ]
+}
 {% endschema %}
+<style>
+  .maincountDown {
+    max-width: 600px;
+    margin: 0 auto 10px auto;
+    height: auto;
+  }
+  .countDownCls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+  }
+  .text__color {
+    color: #de4848;
+    font-weight: 600;
+  }
+  .countdownTitles {
+    margin-top: 20px;
+  }
+  .timer__title {
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .countDownCls div {
+    font-size: 16px;
+    width: calc(25% - 15px);
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  #countdown div {
+    box-shadow: 0 0 5px #0004;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 12px;
+    margin: 12px auto  0 auto;
+    font-weight: 900;
+    color: #de4848;
+    font-size: 30px;
+  }
+  @media(min-width: 360px) and (max-width: 767px){
+    .maincountDown{
+      padding: 10px;
+    }
+    #countdown div{
+      font-size: 20px;
+      padding: 10px 5px;
+    }
+    .timer__title{
+      font-size: 18px;
+    }
+  }
+</style>
 
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
+<script>
+  var countDownDate = new Date('{{ section.settings.count }}').getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000  60  60 * 24));
+    var hours = Math.floor((distance % (1000  60  60  24)) / (1000  60 * 60));
+    var minutes = Math.floor((distance % (1000  60  60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
+    document.getElementById("hours").innerHTML = hours
+    .toString()
+    .padStart(2, "0");
+    document.getElementById("minutes").innerHTML = minutes
+    .toString()
+    .padStart(2, "0");
+    document.getElementById("seconds").innerHTML = seconds
+    .toString()
+    .padStart(2, "0");
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
