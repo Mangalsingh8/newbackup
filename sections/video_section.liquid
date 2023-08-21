@@ -1,0 +1,35 @@
+<div>
+  <div class="w-embed-youtubevideo">
+    <iframe
+      src="https://www.youtube.com/embed/gErAmJR1UOk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+{% schema %}
+{
+    "name": "Embed Youtube",
+    "settings": [
+        {
+            "id": "video_url",
+            "type": "video_url",
+            "label": "Video URL",
+            "accept": ["youtube", "vimeo"],
+            "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "info": "Insert Youtube URL",
+            "placeholder": "text"
+        }
+    ]   ,
+  "presets": [
+    {
+      "name": "Hello"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+{% endjavascript %}
