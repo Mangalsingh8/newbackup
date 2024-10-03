@@ -3,7 +3,7 @@
     <div class="w-embed-youtubevideo">
       <iframe
         class="youtube_section"
-        src="https://www.youtube.com/embed/gErAmJR1UOk"
+        src="{{ settings.video_url | replace: 'watch?v=', 'embed/' }}"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -15,25 +15,26 @@
     </div>
   </div>
 </div>
+
 <style>
-    .section_video{
-      width:96%;
-      margin:0 auto;
-    }
-    .red{
-      width:100%;
-      display:flex;
-    }
-    .red1{
-      width:50%;
-    }
-    .w-embed-youtubevideo{
-      width:50%;
-    }
-    iframe.youtube_section{
-  width: 100%;
-      height:350px;
-    }
+  .section_video{
+    width:96%;
+    margin:0 auto;
+  }
+  .red{
+    width:100%;
+    display:flex;
+  }
+  .red1{
+    width:50%;
+  }
+  .w-embed-youtubevideo{
+    width:50%;
+  }
+  iframe.youtube_section{
+    width: 100%;
+    height:350px;
+  }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {}
 
   @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -43,27 +44,22 @@
     }
   }
 </style>
+
 {% schema %}
 {
     "name": "Embed Youtube",
     "settings": [
         {
             "id": "video_url",
-            "type": "video_url",
+            "type": "url",
             "label": "Video URL",
-            "accept": ["youtube", "vimeo"],
-            "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "info": "Insert Youtube URL",
-            "placeholder": "text"
+            "info": "Insert Youtube or Vimeo URL"
         }
-    ]   ,
-  "presets": [
-    {
-      "name": "Hello"
-    }
-  ]
+    ],
+    "presets": [
+        {
+            "name": "Hello"
+        }
+    ]
 }
 {% endschema %}
-
-{% javascript %}
-{% endjavascript %}
